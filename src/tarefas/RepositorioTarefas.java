@@ -36,4 +36,12 @@ public class RepositorioTarefas {
 	public void removeTarefa(String codigo) {
 		tarefas.remove(codigo);
 	}
+	
+	public String ordenarPorVencimento() {
+		return "";
+	}
+	
+	public String ordenarPorPrioridade() {
+		return "";
+	}
 }

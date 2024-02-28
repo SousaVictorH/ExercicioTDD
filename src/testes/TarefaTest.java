@@ -34,4 +34,11 @@ class TarefaTest {
 		tarefa.setPrioridade(2);
 		assertEquals(2, tarefa.getPrioridade());
 	}
+	
+	@Test
+	void testToString() {
+		Tarefa tarefa = new Tarefa("Titulo", "Descricao", "20/08/2025", 3);
+		
+		assertEquals("Titulo - Descricao - 20/08/2025 - 3", tarefa.toString());
+	}
 }

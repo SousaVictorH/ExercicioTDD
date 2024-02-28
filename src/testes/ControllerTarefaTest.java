@@ -189,4 +189,13 @@ class ControllerTarefasTest {
 		
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 	}
+	
+	@Test
+	void testListaTarefas() {
+		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
+		
+		assertEquals("Titulo - Descricao - 20/08/2025 - 3", controllerTarefas.listaTarefas(repositorioTarefas, true));
+		
+		assertEquals("Titulo - Descricao - 20/08/2025 - 3", controllerTarefas.listaTarefas(repositorioTarefas, true));
+	}
 }

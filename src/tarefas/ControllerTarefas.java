@@ -61,4 +61,12 @@ public class ControllerTarefas {
 		
 		repositorioTarefas.removeTarefa(codigo);
 	}
+	
+	public String listaTarefas(RepositorioTarefas repositorioTarefas, Boolean ordenarPorVencimento) {
+		if (ordenarPorVencimento) {
+			return repositorioTarefas.ordenarPorVencimento();
+		} else {
+			return repositorioTarefas.ordenarPorPrioridade();
+		}
+	}
 }
