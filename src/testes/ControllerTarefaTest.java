@@ -85,4 +85,62 @@ class ControllerTarefasTest {
 		assertEquals(2, tarefa.getPrioridade());
 	}
 	
+	@Test
+	void testAtualizaTarefaNull() {
+		String codigo = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
+
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, null, "Titulo 2", "Descricao 2", "25/08/2025", 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, null, "Descricao 2", "25/08/2025", 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "Titulo 2", null, "25/08/2025", 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "Titulo 2", "Descricao 2", null, 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "Titulo 2", "Descricao 2", "25/08/2025", null);
+		});
+	}
+	
+	@Test
+	void testAtualizaTarefaInvalida() {
+		String codigo = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
+
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, "", "Titulo 2", "Descricao 2", "25/08/2025", 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, "-1", "Titulo 2", "Descricao 2", "25/08/2025", 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "", "Descricao 2", "25/08/2025", 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "Titulo 2", "", "25/08/2025", 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "Titulo 2", "Descricao 2", "", 2);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "Titulo 2", "Descricao 2", "25/08/2025", 0);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "Titulo 2", "Descricao 2", "25/08/2025", 4);
+		});
+	}
+	
 }
