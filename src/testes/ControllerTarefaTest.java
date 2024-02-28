@@ -219,6 +219,20 @@ class ControllerTarefasTest {
 		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo 2", "Descricao 2", "19/08/2025", 3);
 		
 		assertEquals("Titulo 2 - Descricao 2 - 19/08/2025 - 3\nTitulo - Descricao - 20/08/2025 - 2\n", controllerTarefas.listaTarefas(repositorioTarefas, false));
-
+	}
+	
+	@Test
+	void testMarcaPrioridade() {
+		String codigo = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 2);
+		
+		Tarefa tarefa = controllerTarefas.getTarefa(repositorioTarefas, codigo);
+		
+		assertEquals(2, tarefa.getPrioridade());
+		
+		tarefa.setPrioridade(3);
+		
+		Tarefa tarefa2 = controllerTarefas.getTarefa(repositorioTarefas, codigo);
+		
+		assertEquals(3, tarefa2.getPrioridade());
 	}
 }
