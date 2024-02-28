@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import tarefas.ControllerTarefas;
 import tarefas.RepositorioTarefas;
+import tarefas.Tarefa;
 
 class ControllerTarefasTest {
 
@@ -48,7 +49,7 @@ class ControllerTarefasTest {
 	}
 	
 	@Test
-	void criaTarefaInvalida() {
+	void testCriaTarefaInvalida() {
 		assertThrows(IllegalArgumentException.class, () -> {
 			controllerTarefas.criaTarefa(repositorioTarefas, "", "Descricao", "20/08/2025", 3);
 		});
@@ -68,6 +69,20 @@ class ControllerTarefasTest {
 		assertThrows(IllegalArgumentException.class, () -> {
 			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 4);
 		});
+	}
+	
+	@Test
+	void testAtualizaTarefa() {
+		String code = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
+		
+		controllerTarefas.atualizaTarefa(repositorioTarefas, code, "Titulo 2", "Descricao 2", "25/08/2025", 2);
+		
+		Tarefa tarefa = controllerTarefas.getTarefa(repositorioTarefas, code);
+		
+		assertEquals("Titulo 2", tarefa.getTitulo());
+		assertEquals("Descricao 2", tarefa.getDescricao());
+		assertEquals("25/08/2025", tarefa.getVencimento());
+		assertEquals(2, tarefa.getPrioridade());
 	}
 	
 }

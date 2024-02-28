@@ -18,4 +18,20 @@ class TarefaTest {
 		assertEquals(3, tarefa.getPrioridade());
 	}
 	
+	@Test
+	void testGetSetTarefa() {
+		Tarefa tarefa = new Tarefa("Titulo", "Descricao", "20/08/2025", 3);
+		
+		tarefa.setTitulo("Titulo 2");
+		assertEquals("Titulo 2", tarefa.getTitulo());
+		
+		tarefa.setDescricao("Descricao 2");
+		assertEquals("Descricao 2", tarefa.getDescricao());
+		
+		tarefa.setVencimento("21/08/2025");
+		assertEquals("21/08/2025", tarefa.getVencimento());
+		
+		tarefa.setPrioridade(2);
+		assertEquals(2, tarefa.getPrioridade());
+	}
 }
