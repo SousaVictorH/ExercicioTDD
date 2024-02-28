@@ -8,8 +8,6 @@ import tarefas.Tarefa;
 
 class TarefaTest {
 	
-	private Tarefa tarefa;
-
 	@Test
 	void testCriaTarefa() {
 		String titulo = "Titulo";
@@ -17,7 +15,7 @@ class TarefaTest {
 		String vencimento = "25/10/2024";
 		Integer prioridade = 3;
 		
-		tarefa = new Tarefa(titulo, descricao, vencimento, prioridade);
+		Tarefa tarefa = new Tarefa(titulo, descricao, vencimento, prioridade);
 		
 		assertEquals(titulo, tarefa.getTitulo());
 	}
