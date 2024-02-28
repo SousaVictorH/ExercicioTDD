@@ -194,9 +194,6 @@ class ControllerTarefasTest {
 	void testListaTarefas() {
 		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
 		
-		System.out.println(controllerTarefas.listaTarefas(repositorioTarefas, true));
-		System.out.println(controllerTarefas.listaTarefas(repositorioTarefas, false));
-		
 		assertEquals("Titulo - Descricao - 20/08/2025 - 3", controllerTarefas.listaTarefas(repositorioTarefas, true));
 		
 		assertEquals("Titulo - Descricao - 20/08/2025 - 3", controllerTarefas.listaTarefas(repositorioTarefas, false));
