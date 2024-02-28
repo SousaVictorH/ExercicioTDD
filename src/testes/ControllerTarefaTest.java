@@ -73,11 +73,11 @@ class ControllerTarefasTest {
 	
 	@Test
 	void testAtualizaTarefa() {
-		String code = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
+		String codigo = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
 		
-		controllerTarefas.atualizaTarefa(repositorioTarefas, code, "Titulo 2", "Descricao 2", "25/08/2025", 2);
+		controllerTarefas.atualizaTarefa(repositorioTarefas, codigo, "Titulo 2", "Descricao 2", "25/08/2025", 2);
 		
-		Tarefa tarefa = controllerTarefas.getTarefa(repositorioTarefas, code);
+		Tarefa tarefa = controllerTarefas.getTarefa(repositorioTarefas, codigo);
 		
 		assertEquals("Titulo 2", tarefa.getTitulo());
 		assertEquals("Descricao 2", tarefa.getDescricao());

@@ -1,20 +1,35 @@
 package tarefas;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class RepositorioTarefas {
 	
-	private ArrayList<Tarefa> tarefas;
+	static int id;
+	
+	private HashMap<String, Tarefa> tarefas;
 	
 	public RepositorioTarefas() {
-		this.tarefas = new ArrayList<Tarefa>();
+		this.tarefas = new HashMap<String, Tarefa>();
+	}
+	
+	public int geraCodigo() {
+		id++;
+		return id;
 	}
 
-	public void adicionaTarefa(Tarefa tarefa) {
-		tarefas.add(tarefa);
+	public void adicionaTarefa(String codigo, Tarefa tarefa) {
+		tarefas.put(codigo, tarefa);
 	}
 	
 	public Integer getNumeroTarefas() {
 		return tarefas.size();
+	}
+	
+	public boolean existeTarefa(String codigo) {
+		return tarefas.containsKey(codigo);
+	}
+	
+	public Tarefa getTarefa(String codigo) {
+		return tarefas.get(codigo);
 	}
 }
