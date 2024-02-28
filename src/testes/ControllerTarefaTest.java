@@ -151,7 +151,7 @@ class ControllerTarefasTest {
 		
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 		
-		controllerTarefas.removeTarefa(codigo);
+		controllerTarefas.removeTarefa(repositorioTarefas, codigo);
 		
 		assertEquals(0, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 	}
@@ -160,12 +160,12 @@ class ControllerTarefasTest {
 	void testRemoveTarefaNull() {
 		assertEquals(0, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 		
-		String codigo = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
+		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
 		
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 		
 		assertThrows(NullPointerException.class, () -> {
-			controllerTarefas.removeTarefa(null);
+			controllerTarefas.removeTarefa(repositorioTarefas, null);
 		});
 		
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));
@@ -175,16 +175,16 @@ class ControllerTarefasTest {
 	void testRemoveTarefaInvalido() {
 		assertEquals(0, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 		
-		String codigo = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
+		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
 		
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 		
 		assertThrows(IllegalArgumentException.class, () -> {
-			controllerTarefas.removeTarefa("");
+			controllerTarefas.removeTarefa(repositorioTarefas, "");
 		});
 		
 		assertThrows(IllegalArgumentException.class, () -> {
-			controllerTarefas.removeTarefa("-1");
+			controllerTarefas.removeTarefa(repositorioTarefas, "-1");
 		});
 		
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));

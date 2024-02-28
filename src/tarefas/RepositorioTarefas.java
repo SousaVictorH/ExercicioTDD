@@ -32,4 +32,8 @@ public class RepositorioTarefas {
 	public Tarefa getTarefa(String codigo) {
 		return tarefas.get(codigo);
 	}
+	
+	public void removeTarefa(String codigo) {
+		tarefas.remove(codigo);
+	}
 }

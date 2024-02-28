@@ -51,4 +51,14 @@ public class ControllerTarefas {
 		
 		return repositorioTarefas.getTarefa(codigo);
 	}
+	
+	public void removeTarefa(RepositorioTarefas repositorioTarefas, String codigo) {
+		Utils.validaString(codigo, "Campo codigo nao pode ser nulo ou vazio.");
+		
+		if (!repositorioTarefas.existeTarefa(codigo)) {
+			throw new IllegalArgumentException("Tarefa não encontrada");
+		}
+		
+		repositorioTarefas.removeTarefa(codigo);
+	}
 }
