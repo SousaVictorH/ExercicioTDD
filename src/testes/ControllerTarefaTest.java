@@ -165,7 +165,7 @@ class ControllerTarefasTest {
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 		
 		assertThrows(NullPointerException.class, () -> {
-			controllerTarefas.removeTarefa("");
+			controllerTarefas.removeTarefa(null);
 		});
 		
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));
