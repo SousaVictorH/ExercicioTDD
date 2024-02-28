@@ -21,15 +21,30 @@ class ControllerTarefasTest {
 	
 	@Test
 	void testCriaTarefa() {
-		String titulo = "Titulo";
-		String descricao = "Titulo";
-		String vencimento = "25/10/2024";
-		Integer prioridade = 3;
-		
 		assertEquals(0, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 		
-		controllerTarefas.criaTarefa(repositorioTarefas, titulo, descricao, vencimento, prioridade);
+		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 3);
 		
 		assertEquals(1, controllerTarefas.getNumeroTarefas(repositorioTarefas));
 	}
+	
+	@Test
+	void testCriaTarefaNull() {
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, null, "Descricao", "20/08/2025", 3);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", null, "20/08/2025", 3);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", null, 3);
+		});
+		
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", null);
+		});
+	}
+	
 }

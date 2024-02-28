@@ -10,14 +10,12 @@ class TarefaTest {
 	
 	@Test
 	void testCriaTarefa() {
-		String titulo = "Titulo";
-		String descricao = "Titulo";
-		String vencimento = "25/10/2024";
-		Integer prioridade = 3;
-		
-		Tarefa tarefa = new Tarefa(titulo, descricao, vencimento, prioridade);
-		
-		assertEquals(titulo, tarefa.getTitulo());
-	}
+		Tarefa tarefa = new Tarefa("Titulo", "Descricao", "20/08/2025", 3);
 
+		assertEquals("Titulo", tarefa.getTitulo());
+		assertEquals("Descricao", tarefa.getDescricao());
+		assertEquals("20/08/2025", tarefa.getVencimento());
+		assertEquals(3, tarefa.getPrioridade());
+	}
+	
 }
