@@ -29,6 +29,13 @@ public class ControllerTarefas {
 	}
 	
 	public void atualizaTarefa(RepositorioTarefas repositorioTarefas, String codigo, String titulo, String descricao, String vencimento, Integer prioridade) {
+		Utils.validaString(codigo, "Campo codigo nao pode ser nulo ou vazio.");
+		Utils.validaString(titulo, "Campo titulo nao pode ser nulo ou vazio.");
+		Utils.validaString(descricao, "Campo descricao nao pode ser nulo ou vazio.");
+		Utils.validaString(vencimento, "Campo vencimento nao pode ser nulo ou vazio.");
+		Utils.validaInteiro(prioridade, "Campo prioridade nao pode ser nulo ou vazio.");
+		Utils.validaPrioridade(prioridade, "Campo prioridade deve estar entre 1 e 3");
+		
 		Tarefa tarefa = this.getTarefa(repositorioTarefas, codigo);
 		
 		tarefa.setTitulo(titulo);
@@ -38,6 +45,10 @@ public class ControllerTarefas {
 	}
 	
 	public Tarefa getTarefa(RepositorioTarefas repositorioTarefas, String codigo) {
+		if (!repositorioTarefas.existeTarefa(codigo)) {
+			throw new IllegalArgumentException("Tarefa não encontrada");
+		}
+		
 		return repositorioTarefas.getTarefa(codigo);
 	}
 }
