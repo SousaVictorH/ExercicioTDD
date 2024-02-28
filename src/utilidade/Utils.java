@@ -18,4 +18,10 @@ public class Utils {
 		}
 	}
 	
+	public static void validaPrioridade(Integer valor, String mensagem) {
+		if (valor < 1 || valor > 3) {
+			throw new IllegalArgumentException(mensagem);
+		}
+	}
+	
 }
