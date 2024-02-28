@@ -47,4 +47,27 @@ class ControllerTarefasTest {
 		});
 	}
 	
+	@Test
+	void criaTarefaInvalida() {
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "", "Descricao", "20/08/2025", 3);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "", "20/08/2025", 3);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "", 3);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 0);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 4);
+		});
+	}
+	
 }
