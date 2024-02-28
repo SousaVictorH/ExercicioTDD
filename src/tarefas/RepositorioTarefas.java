@@ -1,7 +1,8 @@
 package tarefas;
 
-import java.util.Collection;
-import java.util.HashMap;
+import java.util.*;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 
 public class RepositorioTarefas {
 	
@@ -41,10 +42,26 @@ public class RepositorioTarefas {
 	public String ordenarPorVencimento() {
 		String str = "";
 		
-		Collection<Tarefa> listaTarefas = tarefas.values();
+        List<Tarefa> listaTarefas = new ArrayList<>(tarefas.values());
+
+        Collections.sort(listaTarefas, new Comparator<Tarefa>() {
+        	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        	
+            @Override
+            public int compare(Tarefa tarefa1, Tarefa tarefa2) {
+                try {
+                	Date data1 = simpleDateFormat.parse(tarefa1.getVencimento());
+                    Date data2 = simpleDateFormat.parse(tarefa2.getVencimento());
+                    
+                    return data1.compareTo(data2);
+                } catch (ParseException excpt) {
+                	return 0;
+                }
+            }
+        });
 		
 	    for (Tarefa tarefa : listaTarefas) {
-	        str += tarefa.toString();
+	        str += tarefa.toString() + "\n";
 	    }
 				
 		return str;
@@ -53,10 +70,17 @@ public class RepositorioTarefas {
 	public String ordenarPorPrioridade() {
 		String str = "";
 		
-		Collection<Tarefa> listaTarefas = tarefas.values();
+        List<Tarefa> listaTarefas = new ArrayList<>(tarefas.values());
+
+        Collections.sort(listaTarefas, new Comparator<Tarefa>() {
+            @Override
+            public int compare(Tarefa tarefa1, Tarefa tarefa2) {
+                return tarefa1.getVencimento().compareTo(tarefa2.getVencimento());
+            }
+        });
 		
 	    for (Tarefa tarefa : listaTarefas) {
-	        str += tarefa.toString();
+	        str += tarefa.toString() + "\n";
 	    }
 				
 		return str;

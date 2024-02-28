@@ -207,14 +207,14 @@ class ControllerTarefasTest {
 		
 		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo 2", "Descricao 2", "19/08/2025", 2);
 		
-		assertEquals("Titulo - Descricao - 20/08/2025 - 3\nTitulo 2 - Descricao 2 - 19/08/2025 - 2\n", controllerTarefas.listaTarefas(repositorioTarefas, true));
+		assertEquals("Titulo 2 - Descricao 2 - 19/08/2025 - 2\nTitulo - Descricao - 20/08/2025 - 3\n", controllerTarefas.listaTarefas(repositorioTarefas, true));
 	}
 	
 	@Test
 	void testOrdenarPorPrioridade() {
 		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 2);
 		
-		assertEquals("Titulo - Descricao - 20/08/2025 - 3\n", controllerTarefas.listaTarefas(repositorioTarefas, false));
+		assertEquals("Titulo - Descricao - 20/08/2025 - 2\n", controllerTarefas.listaTarefas(repositorioTarefas, false));
 		
 		controllerTarefas.criaTarefa(repositorioTarefas, "Titulo 2", "Descricao 2", "19/08/2025", 3);
 		
