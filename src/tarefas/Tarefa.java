@@ -45,4 +45,8 @@ public class Tarefa {
 		this.prioridade = prioridade;
 	}
 	
+	public String toString() {
+		return titulo + " - " + descricao + " - " + vencimento + " - " + prioridade;
+	}
+	
 }

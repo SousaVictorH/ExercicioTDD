@@ -1,5 +1,6 @@
 package tarefas;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 public class RepositorioTarefas {
@@ -38,10 +39,26 @@ public class RepositorioTarefas {
 	}
 	
 	public String ordenarPorVencimento() {
-		return "";
+		String str = "";
+		
+		Collection<Tarefa> listaTarefas = tarefas.values();
+		
+	    for (Tarefa tarefa : listaTarefas) {
+	        str += tarefa.toString();
+	    }
+				
+		return str;
 	}
 	
 	public String ordenarPorPrioridade() {
-		return "";
+		String str = "";
+		
+		Collection<Tarefa> listaTarefas = tarefas.values();
+		
+	    for (Tarefa tarefa : listaTarefas) {
+	        str += tarefa.toString();
+	    }
+				
+		return str;
 	}
 }
