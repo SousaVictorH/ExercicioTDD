@@ -16,6 +16,7 @@ public class ControllerFaturas {
         Utils.validaDouble(valor, "Campo valor nao pode ser nulo ou vazio.");
 
         Fatura fatura = new Fatura(nome, endereco, tipoServico, valor);
+        addFaturaToMap(fatura);
 
         return fatura;
     }
