@@ -43,6 +43,9 @@ public class Nota {
         return valorImposto;
     }
 
+    public String toString(){
+        return this.nomeCliente + "-" + this.valorNota;
+    }
 
 
 }
