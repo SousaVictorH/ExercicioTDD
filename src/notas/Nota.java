@@ -26,7 +26,6 @@ public class Nota {
             taxa = taxaTreinamento;
         }
 
-
         return taxa;
     }
 
@@ -34,17 +33,9 @@ public class Nota {
         return nomeCliente;
     }
 
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
-    }
-
 
     public Double getValorNota() {
         return valorNota;
-    }
-
-    public void setValorNota(Double valorNota) {
-        this.valorNota = valorNota;
     }
 
 
@@ -52,7 +43,6 @@ public class Nota {
         return valorImposto;
     }
 
-    public void setValorImposto(Double valorImposto) {
-        this.valorImposto = valorImposto;
-    }
+
+
 }

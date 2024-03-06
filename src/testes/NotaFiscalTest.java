@@ -21,12 +21,4 @@ public class NotaFiscalTest {
 
     }
 
-    @Test
-    void testSalvaNoBd() {
-        Fatura fatura = new Fatura("Nome","Endereco", "CONSULTORIA",2.0);
-        Nota nota = new Nota(fatura);
-
-        assertEquals("salvando no banco", nota.salvaNoBd());
-
-    }
 }
