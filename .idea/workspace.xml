@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6dcf9647-20b4-49d3-b95a-8b1778d45736" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/faturas/ControllerFaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/faturas/ControllerFaturas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/faturas/Fatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/faturas/Fatura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tarefas/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tarefas/Tarefa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testes/ControllerFaturaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testes/ControllerFaturaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testes/FaturaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testes/FaturaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilidade/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilidade/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
