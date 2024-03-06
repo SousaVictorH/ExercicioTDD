@@ -16,7 +16,6 @@ public class ControllerNotaFiscalTest {
 
     @BeforeEach
     void criaControllerNotaFiscal() {
-
         controllerNotaFiscal = new ControllerNotaFiscal();
         controllerFaturas = new ControllerFaturas();
     }

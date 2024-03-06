@@ -2,15 +2,20 @@ package notas;
 
 import faturas.Fatura;
 
+import java.util.UUID;
+
 public class Nota {
     private String nomeCliente;
     private Double valorNota;
     private Double valorImposto;
 
+    private String id;
+
     public Nota(Fatura fatura){
         this.nomeCliente = fatura.getNome();
         this.valorNota = fatura.getValor();
         this.valorImposto = calculaImposto(fatura.getServico());
+        this.id = generateUniqueId();
     }
 
     public Double calculaImposto(String tipoServico) {
@@ -30,21 +35,29 @@ public class Nota {
     }
 
     public String getNomeCliente() {
-        return nomeCliente;
+        return this.nomeCliente;
     }
 
 
     public Double getValorNota() {
-        return valorNota;
+        return this.valorNota;
     }
 
 
     public Double getValorImposto() {
-        return valorImposto;
+        return this.valorImposto;
+    }
+
+    public String getId(){
+        return this.id;
     }
 
     public String toString(){
         return this.nomeCliente + "-" + this.valorNota;
+    }
+
+    public static String generateUniqueId() {
+        return UUID.randomUUID().toString();
     }
 
 

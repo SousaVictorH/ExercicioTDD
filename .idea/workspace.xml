@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dcf9647-20b4-49d3-b95a-8b1778d45736" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bancosDeDados/NotaFiscalDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bancosDeDados/SAP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bancosDeDados/Smtp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/notas/ControllerNotaFiscal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notas/ControllerNotaFiscal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notas/ControllerNotaFiscal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/notas/Nota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notas/Nota.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testes/ControllerNotaFiscalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testes/ControllerNotaFiscalTest.java" afterDir="false" />
     </list>
