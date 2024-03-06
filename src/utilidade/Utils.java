@@ -17,6 +17,12 @@ public class Utils {
 			throw new NullPointerException(mensagem);
 		}
 	}
+
+	public static void validaDouble(Double valor, String mensagem) throws NullPointerException {
+		if (valor == null) {
+			throw new NullPointerException(mensagem);
+		}
+	}
 	
 	public static void validaPrioridade(Integer valor, String mensagem) {
 		if (valor < 1 || valor > 3) {

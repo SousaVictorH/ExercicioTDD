@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6dcf9647-20b4-49d3-b95a-8b1778d45736" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/faturas/ControllerFaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/faturas/ControllerFaturas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/faturas/Fatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/faturas/Fatura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tarefas/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tarefas/Tarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testes/ControllerFaturaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testes/ControllerFaturaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testes/FaturaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testes/FaturaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilidade/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilidade/Utils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2dJbFe9xkPiM0UMr9pmxyOlNFMn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.ControllerFaturaTest.executor": "Run",
+    "JUnit.ControllerTarefasTest.executor": "Run",
+    "JUnit.FaturaTest.testCriaFatura.executor": "Run",
+    "JUnit.TodosOsTestes.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/felipe/vev/ExercicioTDD/bin/testes",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="FaturaTest.testCriaFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExercicioTDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testes" />
+      <option name="MAIN_CLASS_NAME" value="testes.FaturaTest" />
+      <option name="METHOD_NAME" value="testCriaFatura" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodosOsTestes" type="JUnit" factoryName="JUnit">
+      <module name="ExercicioTDD" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/bin/testes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TodosOsTestes" />
+      <item itemvalue="JUnit.FaturaTest.testCriaFatura" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FaturaTest.testCriaFatura" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-6ca9ab15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6dcf9647-20b4-49d3-b95a-8b1778d45736" name="Changes" comment="" />
+      <created>1709729026878</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709729026878</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

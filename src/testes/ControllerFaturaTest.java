@@ -20,8 +20,8 @@ public class ControllerFaturaTest {
 
     @Test
     void testCriaFatura() {
-        controllerFaturas.criaFatura("Nome", "Endereco", "TipoServico", 3.0);
-        
+        Fatura fatura = controllerFaturas.criaFatura("Nome", "Endereco", "TipoServico", 3.0);
+        assertEquals("Nome-Endereco-TipoServico-3.0", fatura.toString());
     }
 }
 
