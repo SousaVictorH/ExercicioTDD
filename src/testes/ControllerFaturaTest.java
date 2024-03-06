@@ -24,6 +24,20 @@ public class ControllerFaturaTest {
         assertEquals("Nome-Endereco-TipoServico-3.0", fatura.toString());
     }
 
-    
+    @Test
+    void testAddFatura() {
+        Fatura fatura = controllerFaturas.criaFatura("Nome", "Endereco", "TipoServico", 3.0);
+
+        assertEquals(fatura.getId(), controllerFaturas.addFaturaToMap(fatura));
+    }
+
+    @Test
+    void testGetFatura() {
+        Fatura fatura = controllerFaturas.criaFatura("Nome", "Endereco", "TipoServico", 3.0);
+        controllerFaturas.addFaturaToMap(fatura);
+
+        assertEquals(fatura.getId(), controllerFaturas.getFatura(fatura.getId()));
+    }
+
 }
 

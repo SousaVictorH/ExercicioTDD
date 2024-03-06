@@ -26,5 +26,10 @@ public class ControllerFaturas {
         return fatura.getId();
     }
 
+    public String getFatura(String id){
+        Fatura fatura = mapDeFaturas.get(id);
+        return fatura.getId();
+    }
+
 
 }
