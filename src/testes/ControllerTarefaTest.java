@@ -235,4 +235,68 @@ class ControllerTarefasTest {
 		
 		assertEquals(3, tarefa2.getPrioridade());
 	}
+	
+	@Test
+	void testTarefa() {
+		String codigo = controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 2);
+		
+		Tarefa tarefa = controllerTarefas.getTarefa(repositorioTarefas, codigo);
+		
+		assertEquals("Titulo", tarefa.getTitulo());
+		assertEquals("Descricao", tarefa.getDescricao());
+		assertEquals("20/08/2025", tarefa.getVencimento());
+		assertEquals(2, tarefa.getPrioridade());
+	}
+	
+	@Test
+	void testTarefaTituloInvalido() {
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, null, "Descricao", "20/08/2025", 2);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "", "Descricao", "20/08/2025", 2);
+		});
+	}
+	
+	@Test
+	void testTarefaDescricaoInvalida() {
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", null, "20/08/2025", 2);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "", "20/08/2025", 2);
+		});
+	}
+	
+	@Test
+	void testTarefaVencimentoInvalido() {
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", null, 2);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "", 2);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "55/22/5555", 2);
+		});
+	}
+	
+	@Test
+	void testTarefaPrioridadeInvalida() {
+		assertThrows(NullPointerException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", null);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 0);
+		});
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "20/08/2025", 4);
+		});
+	}
 }
