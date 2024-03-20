@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dcf9647-20b4-49d3-b95a-8b1778d45736" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/functionalTests/ControllerNotaFiscalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/functionalTests/FaturaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notas/ControllerNotaFiscal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notas/ControllerNotaFiscal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notas/Nota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notas/Nota.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testes/ControllerNotaFiscalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testes/ControllerNotaFiscalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/ControllerNotaFiscal.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/ControllerNotaFiscal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/Nota.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/Nota.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/testes/ControllerNotaFiscalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ExercicioTDD/testes/ControllerNotaFiscalTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +27,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2dJbFe9xkPiM0UMr9pmxyOlNFMn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,9 +41,17 @@
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.ControllerFaturaTest.executor": "Run",
     "JUnit.ControllerNotaFiscalTest.executor": "Run",
+    "JUnit.ControllerNotaFiscalTest.testCalculoImpostoConsultoria1000.executor": "Run",
+    "JUnit.ControllerNotaFiscalTest.testCalculoImpostoOutros1000.executor": "Run",
+    "JUnit.ControllerNotaFiscalTest.testCalculoImpostoOutrosValorPequeno.executor": "Run",
+    "JUnit.ControllerNotaFiscalTest.testCalculoImpostoTreinamento1000.executor": "Run",
+    "JUnit.ControllerNotaFiscalTest.testCalculoImpostoTreinamentoValorLimiteSuperior.executor": "Run",
     "JUnit.ControllerNotaFiscalTest.testCriaNotaFiscal.executor": "Run",
     "JUnit.ControllerTarefasTest.executor": "Run",
+    "JUnit.FaturaTest.testConsultoriaLowValue.executor": "Run",
     "JUnit.FaturaTest.testCriaFatura.executor": "Run",
+    "JUnit.FaturaTest.testOutrosZeroValue.executor": "Run",
+    "JUnit.FaturaTest.testTreinamentoNegativeValue.executor": "Run",
     "JUnit.NotaFiscalTest.executor": "Run",
     "JUnit.TodosOsTestes.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -56,34 +66,82 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ControllerNotaFiscalTest.testCriaNotaFiscal">
-    <configuration name="ControllerNotaFiscalTest.testCriaNotaFiscal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FaturaTest.testOutrosZeroValue">
+    <configuration name="ControllerNotaFiscalTest.testCalculoImpostoOutrosValorPequeno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExercicioTDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="testes.*" />
+          <option name="PATTERN" value="functionalTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="testes" />
-      <option name="MAIN_CLASS_NAME" value="testes.ControllerNotaFiscalTest" />
-      <option name="METHOD_NAME" value="testCriaNotaFiscal" />
+      <option name="PACKAGE_NAME" value="functionalTests" />
+      <option name="MAIN_CLASS_NAME" value="functionalTests.ControllerNotaFiscalTest" />
+      <option name="METHOD_NAME" value="testCalculoImpostoOutrosValorPequeno" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FaturaTest.testCriaFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerNotaFiscalTest.testCalculoImpostoTreinamentoValorLimiteSuperior" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExercicioTDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="testes.*" />
+          <option name="PATTERN" value="functionalTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="testes" />
-      <option name="MAIN_CLASS_NAME" value="testes.FaturaTest" />
-      <option name="METHOD_NAME" value="testCriaFatura" />
+      <option name="PACKAGE_NAME" value="functionalTests" />
+      <option name="MAIN_CLASS_NAME" value="functionalTests.ControllerNotaFiscalTest" />
+      <option name="METHOD_NAME" value="testCalculoImpostoTreinamentoValorLimiteSuperior" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FaturaTest.testConsultoriaLowValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExercicioTDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="functionalTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="functionalTests" />
+      <option name="MAIN_CLASS_NAME" value="functionalTests.FaturaTest" />
+      <option name="METHOD_NAME" value="testConsultoriaLowValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FaturaTest.testOutrosZeroValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExercicioTDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="functionalTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="functionalTests" />
+      <option name="MAIN_CLASS_NAME" value="functionalTests.FaturaTest" />
+      <option name="METHOD_NAME" value="testOutrosZeroValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FaturaTest.testTreinamentoNegativeValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExercicioTDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="functionalTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="functionalTests" />
+      <option name="MAIN_CLASS_NAME" value="functionalTests.FaturaTest" />
+      <option name="METHOD_NAME" value="testTreinamentoNegativeValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,13 +170,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TodosOsTestes" />
-      <item itemvalue="JUnit.ControllerNotaFiscalTest.testCriaNotaFiscal" />
-      <item itemvalue="JUnit.FaturaTest.testCriaFatura" />
+      <item itemvalue="JUnit.FaturaTest.testConsultoriaLowValue" />
+      <item itemvalue="JUnit.FaturaTest.testOutrosZeroValue" />
+      <item itemvalue="JUnit.FaturaTest.testTreinamentoNegativeValue" />
+      <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoOutrosValorPequeno" />
+      <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoTreinamentoValorLimiteSuperior" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ControllerNotaFiscalTest.testCriaNotaFiscal" />
-        <item itemvalue="JUnit.FaturaTest.testCriaFatura" />
+        <item itemvalue="JUnit.FaturaTest.testOutrosZeroValue" />
+        <item itemvalue="JUnit.FaturaTest.testTreinamentoNegativeValue" />
+        <item itemvalue="JUnit.FaturaTest.testConsultoriaLowValue" />
+        <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoTreinamentoValorLimiteSuperior" />
+        <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoOutrosValorPequeno" />
       </list>
     </recent_temporary>
   </component>
