@@ -14,6 +14,8 @@ public class ControllerTarefas {
 		Utils.validaString(vencimento, "Campo vencimento nao pode ser nulo ou vazio.");
 		Utils.validaInteiro(prioridade, "Campo prioridade nao pode ser nulo ou vazio.");
 		Utils.validaPrioridade(prioridade, "Campo prioridade deve estar entre 1 e 3");
+		Utils.validaData(vencimento, "Campo vencimento dese ser válido");
+		Utils.validaVencimento(vencimento, "Campo vencimento deve estar no futuro");
 		
 		String codigo = geraCodigo(repositorioTarefas);
 		

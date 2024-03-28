@@ -281,7 +281,7 @@ class ControllerTarefasTest {
 		});
 		
 		assertThrows(IllegalArgumentException.class, () -> {
-			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "55/22/5555", 2);
+			controllerTarefas.criaTarefa(repositorioTarefas, "Titulo", "Descricao", "30/12/1900", 2);
 		});
 	}
 	

@@ -1,5 +1,8 @@
 package utilidade;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Utils {
 
 	public static void validaString(String valor, String mensagem) throws NullPointerException {
@@ -29,5 +32,31 @@ public class Utils {
 			throw new IllegalArgumentException(mensagem);
 		}
 	}
+	
+    public static void validaData(String data, String mensagem) {
+        SimpleDateFormat sdf = new SimpleDateFormat("DD/MM/YY");
+
+        try {
+            sdf.parse(data);
+        } catch (Exception e) {
+        	throw new IllegalArgumentException(mensagem);
+        }
+    }
+    
+    public static void validaVencimento(String data, String mensagem) {
+        SimpleDateFormat sdf = new SimpleDateFormat("DD/MM/YY");
+
+        try {
+            Date date = sdf.parse(data);
+            Date today = new Date();
+            
+            if (!date.after(today)) {
+            	throw new IllegalArgumentException(mensagem);
+            }
+            
+        } catch (Exception e) {
+        	throw new IllegalArgumentException(mensagem);
+        }
+    }
 	
 }
