@@ -1,4 +1,4 @@
-package unitTests5;
+package unit5Tests;
 
 import faturas.ControllerFaturas;
 import faturas.Fatura;
