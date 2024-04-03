@@ -11,12 +11,19 @@ import bancosDeDados.NotaFiscalDao;
 public class ControllerNotaFiscal {
     private Map<String, Nota> mapDeNotas = new HashMap<>();
 
-    public Nota criaNotaFiscal(String nomeCliente, String enderecoCliente, String tipoServico, Double valor){
-        Fatura fatura = new Fatura(nomeCliente, enderecoCliente, tipoServico, valor);
+
+    public Nota criaNotaFiscal(Fatura fatura){
+        Utils.validaString(fatura.getNome(), "Campo nome nao pode ser nulo ou vazio.");
+        Utils.validaString(fatura.getId(), "Campo id nao pode ser nulo ou vazio.");
+        Utils.validaString(fatura.getServico(), "Campo tipoServico nao pode ser nulo ou vazio.");
+        Utils.validaDoublePositivo(fatura.getValor(), "Campo prioridade nao pode ser nulo ou vazio.");
+
         Nota nota = new Nota(fatura);
         salva(nota);
         envia(nota);
         enviaEmail(nota);
+
+        mapDeNotas.put(nota.getId(), nota);
 
         return nota;
     }

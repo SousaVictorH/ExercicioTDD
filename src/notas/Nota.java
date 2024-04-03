@@ -8,14 +8,15 @@ public class Nota {
     private String nomeCliente;
     private Double valorNota;
     private Double valorImposto;
-
     private String id;
+    private String faturaId;
 
     public Nota(Fatura fatura){
         this.nomeCliente = fatura.getNome();
         this.valorNota = fatura.getValor();
-        this.valorImposto = calculaImposto(fatura.getServico());
+        this.valorImposto = calculaImposto(fatura.getServico())*valorNota;
         this.id = generateUniqueId();
+        this.faturaId = fatura.getId();
     }
 
     public Double calculaImposto(String tipoServico) {
@@ -24,13 +25,11 @@ public class Nota {
         final double taxaOutros = 0.06;
         double taxa = taxaOutros;
 
-
         if ("CONSULTORIA".equalsIgnoreCase(tipoServico)) {
             taxa = taxaConsultoria;
         } else if ("TREINAMENTO".equalsIgnoreCase(tipoServico)) {
             taxa = taxaTreinamento;
         }
-
         return taxa;
     }
 
@@ -38,11 +37,9 @@ public class Nota {
         return this.nomeCliente;
     }
 
-
     public Double getValorNota() {
         return this.valorNota;
     }
-
 
     public Double getValorImposto() {
         return this.valorImposto;

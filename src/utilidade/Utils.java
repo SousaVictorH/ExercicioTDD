@@ -21,6 +21,13 @@ public class Utils {
 		}
 	}
 
+	public static void validaDoublePositivo(Double valor, String mensagem) throws NullPointerException {
+		if (valor < 0) {
+			throw new IllegalArgumentException(mensagem);
+		}
+	}
+
+
 	public static void validaDouble(Double valor, String mensagem) throws NullPointerException {
 		if (valor == null) {
 			throw new NullPointerException(mensagem);

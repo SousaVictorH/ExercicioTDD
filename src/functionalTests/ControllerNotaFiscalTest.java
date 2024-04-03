@@ -3,6 +3,7 @@ import faturas.ControllerFaturas;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params;
 import notas.ControllerNotaFiscal;
 import faturas.Fatura;
 import notas.Nota;
@@ -19,7 +20,8 @@ class ControllerNotaFiscalTest {
         controller = new ControllerNotaFiscal();
     }
 
-    @Test
+
+    @ParameterizedTest
     void testCalculoImpostoConsultoria1000() {
         Fatura fatura = new Fatura("Cliente A", "Endereço A", "CONSULTORIA", 1000.0);
         Nota nota = controller.criaNotaFiscal("Cliente A", "Endereço A","CONSULTORIA", 1000.0);

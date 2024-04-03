@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dcf9647-20b4-49d3-b95a-8b1778d45736" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/functionalTests/ControllerNotaFiscalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/functionalTests/FaturaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unitTests5/ControllerFaturaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unitTests5/ControllerNotaFiscalTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/ControllerNotaFiscal.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/ControllerNotaFiscal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/Nota.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/Nota.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/testes/ControllerNotaFiscalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ExercicioTDD/testes/ControllerNotaFiscalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ExercicioTDD/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/functionalTests/ControllerNotaFiscalTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/ControllerNotaFiscal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/notas/Nota.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/tarefas/ControllerTarefas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/testes/ControllerTarefasTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ExercicioTDD/utilidade/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functionalTests/ControllerNotaFiscalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/functionalTests/ControllerNotaFiscalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notas/ControllerNotaFiscal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notas/ControllerNotaFiscal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notas/Nota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notas/Nota.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilidade/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilidade/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +49,7 @@
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.ControllerFaturaTest.executor": "Run",
     "JUnit.ControllerNotaFiscalTest.executor": "Run",
+    "JUnit.ControllerNotaFiscalTest.testCalculoImpostoComValorNegativo.executor": "Run",
     "JUnit.ControllerNotaFiscalTest.testCalculoImpostoConsultoria1000.executor": "Run",
     "JUnit.ControllerNotaFiscalTest.testCalculoImpostoOutros1000.executor": "Run",
     "JUnit.ControllerNotaFiscalTest.testCalculoImpostoOutrosValorPequeno.executor": "Run",
@@ -61,23 +70,23 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/felipe/vev/ExercicioTDD/bin/testes",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.FaturaTest.testOutrosZeroValue">
-    <configuration name="ControllerNotaFiscalTest.testCalculoImpostoOutrosValorPequeno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ControllerNotaFiscalTest.testCalculoImpostoComValorNegativo">
+    <configuration name="ControllerNotaFiscalTest.testCalculoImpostoComValorNegativo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExercicioTDD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="functionalTests.*" />
+          <option name="PATTERN" value="unitTests5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="functionalTests" />
-      <option name="MAIN_CLASS_NAME" value="functionalTests.ControllerNotaFiscalTest" />
-      <option name="METHOD_NAME" value="testCalculoImpostoOutrosValorPequeno" />
+      <option name="PACKAGE_NAME" value="unitTests5" />
+      <option name="MAIN_CLASS_NAME" value="unitTests5.ControllerNotaFiscalTest" />
+      <option name="METHOD_NAME" value="testCalculoImpostoComValorNegativo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,19 +179,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TodosOsTestes" />
+      <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoComValorNegativo" />
       <item itemvalue="JUnit.FaturaTest.testConsultoriaLowValue" />
       <item itemvalue="JUnit.FaturaTest.testOutrosZeroValue" />
       <item itemvalue="JUnit.FaturaTest.testTreinamentoNegativeValue" />
-      <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoOutrosValorPequeno" />
       <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoTreinamentoValorLimiteSuperior" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoComValorNegativo" />
         <item itemvalue="JUnit.FaturaTest.testOutrosZeroValue" />
         <item itemvalue="JUnit.FaturaTest.testTreinamentoNegativeValue" />
         <item itemvalue="JUnit.FaturaTest.testConsultoriaLowValue" />
         <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoTreinamentoValorLimiteSuperior" />
-        <item itemvalue="JUnit.ControllerNotaFiscalTest.testCalculoImpostoOutrosValorPequeno" />
       </list>
     </recent_temporary>
   </component>
